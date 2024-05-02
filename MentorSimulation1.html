@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css"/>
+    <title>Mentor Simulation week 9</title>
+</head>
+<body>
+    <h1 class="title">Choose Your Plan</h1>
+    <p class="description">Select the perfect plan tailored to your needs</p>
+    <section class="wrapper-card">
+        <div class="card">
+        <h2 class="title-card">Personal</h2>
+        <h1 class="price">$100/month</h1>
+        <ul>
+            <li>Access to all features</li>
+            <li>Single user access</li>
+            <li>Email support</li>
+        </ul>
+        <button  type="button">Klik Disini</button>
+    </div>
+    <div class="card">
+        <h2 class="title-card">Personal</h2>
+        <h1 class="price">$100/month</h1>
+        <ul>
+            <li>Access to all features</li>
+            <li>Single user access</li>
+            <li>Email support</li>
+        </ul>
+        <button  type="button">Klik Disini</button>
+    </div>
+    <div class="card">
+        <h2 class="title-card">Personal</h2>
+        <h1 class="price">$100/month</h1>
+        <ul>
+            <li>Access to all features</li>
+            <li>Single user access</li>
+            <li>Email support</li>
+        </ul>
+        <button  type="button">Klik Disini</button>
+    </div>
+    <div class="card">
+        <h2 class="title-card">Personal</h2>
+        <h1 class="price">$100/month</h1>
+        <ul>
+            <li>Access to all features</li>
+            <li>Single user access</li>
+            <li>Email support</li>
+        </ul>
+        <button  type="button">Klik Disini</button>
+    </div>
+</section> 
+<script>
+    // JavaScript code to handle the interaction with the plans
+ document.addEventListener('DOMContentLoaded', function() {
+     // Select all the buttons within the card elements
+     const buttons = document.querySelectorAll('.wrapper-card .card button');
+ 
+     // Add click event listeners to each button
+     buttons.forEach(function(button) {
+         button.addEventListener('click', function() {
+             // When a button is clicked, display an alert with the plan details
+             const card = button.closest('.card');
+             const title = card.querySelector('.title-card').textContent;
+             const price = card.querySelector('.price').textContent;
+             const features = Array.from(card.querySelectorAll('ul li')).map(li => li.textContent).join('\n');
+ 
+             alert(`You have selected the ${title} plan:\n\nPrice: ${price}\nFeatures:\n${features}`);
+         });
+     });
+ });
+ </script>  
+</body>
+
+</html>
